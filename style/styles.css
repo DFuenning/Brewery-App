@@ -1,0 +1,207 @@
+/* --- STYLES FOR ALL PAGES --- */
+
+
+html {
+    /* Positioning */
+    position: relative;
+    
+    /* Box-model */
+    min-height: 100%;
+}
+
+/* add space for fixed nav */
+
+
+body {
+    /* Typography */
+    
+    background-color: beige;
+
+    /* Visual */
+    /* background-image: linear-gradient() */
+}
+
+
+.block-header {
+    /* Typography */
+    color: #903749;
+    font-weight: bold;
+}
+
+#headshot {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* NAV START */
+#logo {
+
+    /* Typography */
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+
+}
+
+
+span {
+    color: #88304e;
+}
+
+/* override bootstrap hover color and border */
+.navbar-default .navbar-nav>li>a:hover {
+    color: #4aaaa5;
+}
+
+nav {
+    background-color: #ffdd67;
+    border: none;
+}
+
+.social-icons {
+    padding: 0.25rem;
+}
+
+.social-icons:hover {
+    opacity: 0.5;
+}
+
+/* media query for nav background color change */
+@media only screen and (max-width: 736px) and (max-width: 992px) {
+    
+
+    h1 {
+        padding: auto;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .form-main {
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-icons {
+        padding: 0;
+        margin: 0;
+    }
+
+    .collapse {
+        align-items: center;
+    }
+
+    .contacts {
+        margin-left: 50%;
+    }
+
+}
+
+/* END NAV */
+/* body content section */
+
+
+.title-wrapper {
+    padding-top: 30px;
+    background-color: #f3f3f3;
+}
+
+.row {
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ffcd38;
+}
+
+p {
+    font-weight: 500;
+}
+
+#card-align {
+    justify-content: center;
+    border-bottom: none;
+     
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card{
+    margin-bottom: 50px;
+    text-align: center;
+} 
+
+#searchCard {
+    background-color: #ffcd38;
+    color: black;
+    font-weight: 700;
+    border: solid 1px #2b2e4a;
+}
+/* .cardrow1 {
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 50%;
+    text-align: center;
+} */
+
+#teamname {
+    text-align: center;
+}
+
+/* CONNECT W/ ME CSS */
+.connect-header {
+    /* Typography */
+    font-size: 25px;
+}
+
+.connect-photo {
+    /* Box-model */
+    width: 55px;
+    height: 55px;
+}
+
+#images {
+    /* Box-model */
+    padding-top: 15px;
+
+    /* Typography */
+    text-align: center;
+}
+
+
+
+
+/* END CONNECT W/ ME */
+
+
+/* BEGIN FOOTER */
+.footer {
+    /* Positioning */
+    position: fixed;
+    bottom: 0;
+
+    /* Box-model */
+    width: 100%;
+    height: 60px;
+    /* Visual */
+    background-color: #ffcd38;
+}
+
+.text-muted-footer {
+    /* Box-model */
+    margin-top: 15px;
+
+    /* Typography */
+    color: #fff;
+}
+
+
+.two-toned-footer-color {
+    /* Box-model */
+    height: 6px;
+    padding-top: 3px;
+
+    /* Visual */
+    background-color: #dbe2ef;
+}
+
+/* END FOOTER */
