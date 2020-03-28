@@ -143,10 +143,9 @@ p {
     text-align: center;
 } */
 
-#teamname {
-    text-align: center;
+#noborder {
+    border-bottom: solid 0px white;
 }
-
 /* CONNECT W/ ME CSS */
 .connect-header {
     /* Typography */
