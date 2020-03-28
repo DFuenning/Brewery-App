@@ -19,11 +19,12 @@ function citySearch(city) {
         
         //Creates a cardbody and div to hold brewery
         var cardDiv = $("<div class= 'card' style='width: 18rem;'>");
-        var cardBody = $("<div class= 'card-body'>");
+        var cardBody = $("<div class= 'card-body border-dark shadow p-1 mb-2'>");
         cardDiv.append(cardBody);
         //Populates brewery name and appends to breweryDiv
         var breweryName = response[i].name;
-        var pOne = $("<p class= 'card-title'>").text("Name: " + breweryName);
+        var pOne = $("<h4 class= 'card-title'>").text(breweryName);
+        
         cardBody.append(pOne);
         //Populates brewery address and appends to breweryDiv
         var breweryStreet = response[i].street;
