@@ -1,24 +1,4 @@
-// // $(window).on('load', function () {
-// //     $('.modal').modal('show')
-// // })
-
-
 $(document).ready(function () {
-
-
-
-    //             var key = "JCSwBfoESyxmXiCPDgTBHPPDkUWm9rDw";
-
-    //             $.ajax({
-    //                 url: "http://www.mapquestapi.com/traffic/v2/markets?key=" + key,
-    //                 method: 'GET',
-
-
-    //             }).then(function (url) {
-
-
-    //                 console.log(url)
-    //             });
 
     //Onclick that takes the city name input and uses it in citySearch function
     $("#select-city").on("click", function (event) {
@@ -84,49 +64,42 @@ $(document).ready(function () {
                 //Populates brewery website and appends to breweryDiv
                 var breweryWeb = response[i].website_url;
 
-                var pFour = $("<p class= 'card-text'>").text("Website: " + breweryWeb);
+                var pFour = $("<p class= 'card-text'>").html("<a href='" + breweryWeb + "'>" + breweryWeb + "</a>");
 
                 cardBody.append(pFour);
 
-                var mapButton = $("<button type='button' class='btn btn-dark' id='mapBtn'>").text("Get a Map!");
+                //Populates and apends map
+                var mapDiv = $("<div class= 'mapOutput'>");
 
-                cardBody.append(mapButton);
+                cardBody.append(mapDiv);
 
                 var brewLat = response[i].latitude;
                 var brewLong = response[i].longitude;
 
-                $("#outputInfo").prepend(cardBody);
+                if (brewLat !== null || 0) {
 
-                $(mapButton).click(function () {
+                    var breweryMarker = new H.map.Marker({lat: brewLatm, lng: brewLong});
+                    map.addObject(breweryMarker);
+
                     var platform = new H.service.Platform({
                         'apikey': 'fBvknYTFknJqdfBiyf0aVH5JZjD2I_nlAFsE-GJWSX0'
                     });
-                
+
                     // Obtain the default map types from the platform object:
                     var defaultLayers = platform.createDefaultLayers();
-                
+
                     // Instantiate (and display) a map object:
                     var map = new H.Map(
                         document.getElementById('outputInfo'),
                         defaultLayers.vector.normal.map,
                         {
-                            zoom: 12,
+                            zoom: 18,
                             center: { lat: brewLat, lng: brewLong }
                         });
-                
-                    var ui = H.ui.UI.createDefault(map, defaultLayers);
-                    $("#mapOutput").prepend(map);
-                   // mapOutput.append(map);
-                
-                });
-                    //maps call
-                    //pass throuhg lat and long
-                    //print the page
-                    //window.location.href = 'map.html';
-
-                
+                    mapDiv.append(map);
+                }
+                $("#outputInfo").append(cardBody);
             }
-
         });
     }
 
@@ -135,40 +108,27 @@ $(document).ready(function () {
         var queryURL = "https://api.sportsdata.io/v3/mlb/scores/json/GamesByDate/" + today + "?key=fc808d63943042c7a02880b2a3773b43";
 
         //Run AJAX call 
-
         $.ajax({
             url: queryURL,
             method: "GET"
-        })
+        }).then(function (response) {
 
+            for (var i = 0; i < response.length; i++) {
 
-            .then(function (response) {
+                var gameMoment = moment(response[i].DateTime).format("h" + ":" + "hh A");
 
-                var count = response.length;
+                var gameDiv = $("<div class='gameDiv'" + i + "></div>");
+                var teamsP = $("<p class='col-sm' style='font-weight:bold'></p>").text(response[i].AwayTeam + " @ " + response[i].HomeTeam);
+                var timeP = $("<p class='col-sm'></p>").text(gameMoment);
+                var statusP = $("<p class='col-sm'></p>").text(response[i].Status);
 
-                for (var i = 0; i < response.length; i++) {
-
-                    var gameMoment = moment(response[i].DateTime).format("h" + ":" + "hh A");
-
-                    var gameDiv = $("<div class='gameDiv'" + i + "></div>");
-                    var teamsP = $("<p class='col-sm'></p>").text(response[i].AwayTeam + " @ " + response[i].HomeTeam);
-                    var timeP = $("<p class='col-sm'></p>").text(gameMoment);
-                    var statusP = $("<p class='col-sm'></p>").text(response[i].Status);
-
-                    //$("#sportsBar").append(teamsP, timeP, statusP);
-                    gameDiv.append(teamsP, timeP, statusP);
-                    $("#sportsBar").append(gameDiv);
-
-
-                }
-
-
-            });
+                //$("#sportsBar").append(teamsP, timeP, statusP);
+                gameDiv.append(teamsP, timeP, statusP);
+                $("#sportsBar").append(gameDiv);
+            }
+        });
     };
     gameSearch();
-
-
-
 });
 
 
