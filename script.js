@@ -78,9 +78,6 @@ $(document).ready(function () {
 
                 if (brewLat !== null || 0) {
 
-                    var breweryMarker = new H.map.Marker({lat: brewLatm, lng: brewLong});
-                    map.addObject(breweryMarker);
-
                     var platform = new H.service.Platform({
                         'apikey': 'fBvknYTFknJqdfBiyf0aVH5JZjD2I_nlAFsE-GJWSX0'
                     });
@@ -96,6 +93,9 @@ $(document).ready(function () {
                             zoom: 18,
                             center: { lat: brewLat, lng: brewLong }
                         });
+                        var breweryMarker = new H.map.Marker({ lat: brewLat, lng: brewLong });
+                    map.addObject(breweryMarker);
+
                     mapDiv.append(map);
                 }
                 $("#outputInfo").append(cardBody);
@@ -118,7 +118,7 @@ $(document).ready(function () {
                 var gameMoment = moment(response[i].DateTime).format("h" + ":" + "hh A");
 
                 var gameDiv = $("<div class='gameDiv'" + i + "></div>");
-                var teamsP = $("<p class='col-sm' style='font-weight:bold'></p>").text(response[i].AwayTeam + " @ " + response[i].HomeTeam);
+                var teamsP = $("<p class='col-sm'></p>").text(response[i].AwayTeam + " @ " + response[i].HomeTeam);
                 var timeP = $("<p class='col-sm'></p>").text(gameMoment);
                 var statusP = $("<p class='col-sm'></p>").text(response[i].Status);
 

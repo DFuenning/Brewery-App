@@ -1,123 +1,147 @@
 <!DOCTYPE html>
-
 <html class="no-js">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Brew Test Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- navbar-light bg-light -->
+<body class="backwrap">
+    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand" href="index.html" id="logo">Beer <span>Here!</span></a>
-            <a href="index.html" class="social-icons"><img src="https://image.flaticon.com/icons/svg/2533/2533878.svg" width="40" height="40" alt="Mounted wall Sign" title="Mounted wall sign"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            <a class="navbar-brand text-white" href="index.html">Beer <span class="enhance">Here</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><img src="https://image.flaticon.com/icons/svg/2533/2533878.svg"
+                        width="36" height="36" alt="Mounted wall Sign" title="Mounted wall sign"></span>
             </button>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="find.html">Brew Finder</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link text-white" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="find.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">About Us</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-    <div class="container contacts">
-        <main class="row">
-            <div class="col-md-12">
-                <article class="block">
-                    <h1 class="block-header text-center teamname">Our Team!</h1>
-                    <hr />
-                    <!-- End of navbar -->
-                    <div class="container" id="cardrow-1">
-                        <div class="row" id="noborder">
-                            <div class="col-sm-6 col-md-12 col-lg-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="assets/images/chrisb.jpg" class="card-img-top" alt="Chris Bush">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Chris Bush</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a class="github-button" href="https://github.com/chrisrandbush" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @CBush</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-12 col-lg-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="assets/images/JohnT.png" class="card-img-top" alt="John Thomas">
-                                    <div class="card-body">
-                                        <h5 class="card-title">John Thomas</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a class="github-button" href="https://github.com/Jeon17" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @JThomas</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="noborder">
-                        <div class="col-md-6">
-                            <div class="card" style="width: 18rem;">
-                                <img src="assets/images/BryanB.jpg" class="card-img-top" alt="Bryan Boudreau">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bryan Boudreau</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="github-button" href="https://github.com/boudreau14" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @BBoudreau</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card" style="width: 18rem;">
-                                <img src="assets/images/DerekF.png" class="card-img-top" alt="Derek Fuenning">
-                                <div class="card-body">
-                                    <h5 class="card-title">Derek Fuenning</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="github-button" href="https://github.com/DFuenning" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @DFuenning</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+    <br>
+    <section class="meetTeam">
+        <div class="container">
+            <div id="center" class="col-xl-12">
+                <h1 class="teamIntro">
+                    Meet the <span class="enhance">Team!</span>
+                </h1>
             </div>
-        </main>
-    </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-12 col-lg-6">
+                    <div class="flip-card" style="float: right;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/DerekF.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Derek</h1>
+                                <p>Full Stack Developer</p>
+                                <p>Beer Snob</p>
+                                <a class="github-button" href="https://github.com/DFuenning" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @DFuenning</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                        <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/JohnT.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>John</h1>
+                                <p>Full Stack Developer</p>
+                                <p>Beer Snob</p>
+                                <a class="github-button" href="https://github.com/Jeon17" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @JThomas</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="marginID" class="row">
+                <div class="col-sm-6 col-md-12 col-lg-6" >
+                    <div class="flip-card" style="float: right;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/BryanB.jpg" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Bryan</h1>
+                                <p>Full Stack Developer</p>
+                                <p>Beer Snob</p>
+                                <a class="github-button" href="https://github.com/boudreau14" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @BBoudreau</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                        <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/chrisb.jpg" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Chris</h1>
+                                <p>Full Stack Developer</p>
+                                <p>Beer Snob</p>
+                                <a class="github-button" href="https://github.com/chrisrandbush" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @CBush</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
 
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="two-toned-footer-color"></div>
-        <p class="text-muted text-muted-footer text-center">
-            &copy; Copyright
-        </p>
+
+
+    </section>
+    <footer class="page-footer font-small">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="contact.html"> Team 3</a>
+        </div>
     </footer>
 
-
-
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="script.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
