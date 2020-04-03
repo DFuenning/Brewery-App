@@ -123,11 +123,11 @@ $(document).ready(function () {
             for (var i = 0; i < response.length; i++) {
 
                 var gameMoment = moment(response[i].DateTime).format("h" + ":" + "hh A");
-
+                var date = moment().format('L')
                 var gameDiv = $("<div class='gameDiv'" + i + "></div>");
                 var teamsP = $("<p class='col-sm'></p>").text(response[i].AwayTeam + " @ " + response[i].HomeTeam);
                 var timeP = $("<p class='col-sm'></p>").text(gameMoment);
-                var statusP = $("<p class='col-sm'></p>").text(response[i].Status);
+                var statusP = $("<p class='col-sm'></p>").text(date);
 
                 //$("#sportsBar").append(teamsP, timeP, statusP);
                 gameDiv.append(teamsP, timeP, statusP);
