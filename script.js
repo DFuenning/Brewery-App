@@ -122,7 +122,7 @@ $(document).ready(function () {
 
             for (var i = 0; i < response.length; i++) {
 
-                var gameMoment = moment(response[i].DateTime).format("h" + ":" + "hh A");
+                var gameMoment = moment(response[i].DateTime).format("h" + ":" + "00" + "A");
                 var date = moment().format('L')
                 var gameDiv = $("<div class='gameDiv'" + i + "></div>");
                 var teamsP = $("<p class='col-sm'></p>").text(response[i].AwayTeam + " @ " + response[i].HomeTeam);
