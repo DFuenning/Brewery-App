@@ -11,7 +11,7 @@ The website built to put you into a new local brewery to catch the game!
 
 With one search, you are able to connect with this vast list of breweries and plan your next evening (or afternoon, we do not judge here) out with friends!
  
- 
+ Link to deployed Site: https://dfuenning.github.io/Brewery-App/
 
 We hope you enjoy our creation!
 Sincerely,
