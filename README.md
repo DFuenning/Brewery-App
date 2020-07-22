@@ -18,7 +18,7 @@ Sincerely,
  ## The Brew Bro’s Team
 
  
-![Alt text](images/Capture.PNG?raw=true "Screen Shot")
+![Alt text](templeteGenerator.PNG?raw=true "Screen Shot")
 
 
 
